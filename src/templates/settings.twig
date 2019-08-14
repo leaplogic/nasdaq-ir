@@ -1,0 +1,34 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Nasdaq IR plugin for Craft CMS 3.x
+ *
+ * Nasdaq IR Settings.twig
+ *
+ * @author    Leap Logic
+ * @copyright Copyright (c) 2019 Leap Logic
+ * @link      https://leaplogic.net
+ * @package   NasdaqIr
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{# {% do view.registerAssetBundle("leaplogic\\nasdaqir\\assetbundles\\nasdaqir\\NasdaqIrAsset") %} #}
+
+{{ forms.textField({
+    label: 'News Endpoint',
+    instructions: 'Add the url endpoint to specific NASDAQ news from the clientapi.gcs-web.com API.',
+    id: 'newsEndpoint',
+    name: 'newsEndpoint',
+    value: settings['newsEndpoint']})
+}}
+
+{{ forms.textField({
+    label: 'Stock Endpoint',
+    instructions: 'Add the url endpoint to specific NASDAQ stock quote from the clientapi.gcs-web.com API.',
+    id: 'stockEndpoint',
+    name: 'stockEndpoint',
+    value: settings['stockEndpoint']})
+}}

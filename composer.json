@@ -1,0 +1,40 @@
+{
+    "name": "leaplogic/nasdaq-ir",
+    "description": "Pull Nasdaq Stock & News from specific endpoints",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "nasdaq ir"
+    ],
+    "support": {
+        "docs": "https://github.com/leaplogic/nasdaq-ir/blob/master/README.md",
+        "issues": "https://github.com/leaplogic/nasdaq-ir/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Leap Logic",
+            "homepage": "https://leaplogic.net"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "leaplogic\\nasdaqir\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Nasdaq IR",
+        "handle": "nasdaq-ir",
+        "hasCpSettings": true,
+        "hasCpSection": false,
+        "changelogUrl": "https://raw.githubusercontent.com/leaplogic/nasdaq-ir/master/CHANGELOG.md",
+        "class": "leaplogic\\nasdaqir\\NasdaqIr"
+    }
+}
