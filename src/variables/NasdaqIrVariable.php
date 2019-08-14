@@ -46,7 +46,7 @@ class NasdaqIrVariable
      */
     public function news()
 	{
-		$json_endpoint = craft::$app->plugins->getPlugin('NasdaqIr')->getSettings()->newsEndpoint;
+		$json_endpoint = craft::$app->plugins->getPlugin('nasdaq-ir')->getSettings()->newsEndpoint;
 
         $curl = curl_init();
         curl_setopt ($curl, CURLOPT_URL, $json_endpoint);
@@ -68,7 +68,7 @@ class NasdaqIrVariable
      */
     public function stock()
     {
-        $json_endpoint = craft::$app->plugins->getPlugin('NasdaqIr')->getSettings()->stockEndpoint;
+        $json_endpoint = craft::$app->plugins->getPlugin('nasdaq-ir')->getSettings()->stockEndpoint;
 
         $curl = curl_init();
         curl_setopt ($curl, CURLOPT_URL, $json_endpoint);
